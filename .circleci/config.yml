@@ -165,7 +165,7 @@ jobs:
           name: Ensure front-end infrastructure exist
           command: |
             aws cloudformation deploy \
-              --template-file .circleci/files/backend.yml \
+              --template-file .circleci/files/frontend.yml \
               --tags project=udapeople \
               --stack-name "udapeople-frontend-${CIRCLE_WORKFLOW_ID:0:7}" \
               --parameter-overrides ID="${CIRCLE_WORKFLOW_ID:0:7}"
@@ -196,7 +196,7 @@ jobs:
       # Add ssh keys with fingerprint
       - add_ssh_keys:
           fingerprints:
-              - "de:e6:39:40:98:4d:c3:f9:12:dd:77:02:7d:e2:3a:d1"
+              - "a6:60:00:50:ae:2c:0a:86:72:2a:b0:e2:f9:50:1e:ca"
       # attach workspace
       - attach_workspace:
           at: ~/
@@ -300,7 +300,7 @@ jobs:
       # Add ssh keys with fingerprint
       - add_ssh_keys:
          fingerprints:
-            - "de:e6:39:40:98:4d:c3:f9:12:dd:77:02:7d:e2:3a:d1"
+            - "a6:60:00:50:ae:2c:0a:86:72:2a:b0:e2:f9:50:1e:ca"
       # attach workspace
       - attach_workspace:
           at: ~/
