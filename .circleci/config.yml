@@ -205,7 +205,7 @@ jobs:
           command: |
             apk add --update --no-cache ansible tar gzip aws-cli openssh
       - run:
-          name: Configure server
+          name: Configure-server
           command: |
             pwd
             cd .circleci/ansible
